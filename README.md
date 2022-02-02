@@ -1,14 +1,13 @@
-# ts-project-template
+# autoupdater
 
-A simple TypeScript project template with ESLint, prettier and GitHub actions
+TODO
 
-## npm scripts
+## Setup
 
-- `format`: formats the code using Prettier
-- `lint`: checks for lint errors using ESLint
-- `test:tsc`: checks for TypeScript errors
+_`curl` is supported on all operating systems._
 
-## workflows
+```sh
+curl https://raw.githubusercontent.com/SnailyCAD/autoupdater/main/dist/index.js > script.js
 
-- `lint`: runs the `lint` script
-- `tsc-test`: runs the `test:tsc` script
+node script.js
+```
