@@ -1,6 +1,6 @@
 # autoupdater
 
-TODO
+A simple script to automatically run the required steps to update SnailyCADv4.
 
 ## Setup
 
