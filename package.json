@@ -1,10 +1,10 @@
 {
   "name": "autoupdater",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple script to automatically run the required steps to update SnailyCADv4.",
   "author": {
     "name": "Dev-CasperTheGhost",
-    "url": "https://caspertheghost.me"
+    "url": "https://www.caspertheghost.me"
   },
   "license": "MIT",
   "scripts": {

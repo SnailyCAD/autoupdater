@@ -30,7 +30,9 @@ async function main() {
         ).dir,
       );
 
-  console.log({ currentDir });
+  if (__IS_DEV__) {
+    console.log({ currentDir });
+  }
 
   // git pull origin main
   await gitPull(currentDir);
