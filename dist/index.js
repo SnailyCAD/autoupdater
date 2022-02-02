@@ -33454,7 +33454,9 @@ async function main() {
                 default: "./snaily-cadv4",
             },
         ])).dir);
-    console.log({ currentDir });
+    if (exports.__IS_DEV__) {
+        console.log({ currentDir });
+    }
     // git pull origin main
     await (0, gitPull_1.gitPull)(currentDir);
     // install dependencies
@@ -33492,6 +33494,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.gitPull = void 0;
 const node_process_1 = __importDefault(__nccwpck_require__(97742));
 const node_child_process_1 = __nccwpck_require__(17718);
+const script_1 = __nccwpck_require__(240);
 async function gitPull(currentDir) {
     let out;
     try {
@@ -33502,10 +33505,13 @@ async function gitPull(currentDir) {
         }
     }
     catch (e) {
-        console.log({ e });
+        if (script_1.__IS_DEV__) {
+            console.log({ e });
+        }
         out = e.stderr.toString();
     }
-    if (out.includes("Automatic merge failed; fix conflicts and then commit the result.")) {
+    if (out.includes("Automatic merge failed; fix conflicts and then commit the result.") ||
+        out.includes("error: Your local changes to the following files would be overwritten by merge")) {
         console.error("Could not automatically update SnailyCADv4. There are conflicts with with changed files. Please fix these conflicts or get support here: https://discord.gg/eGnrPqEH7U");
         node_process_1.default.exit(0);
     }
