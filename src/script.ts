@@ -44,15 +44,9 @@ async function main() {
   // copy .env file to client & api
   execSync("node scripts/copy-env.mjs --client --api", { cwd: currentDir });
 
-  // build util packages
-  console.log("Building util packages...");
-  execSync("yarn workspace @snailycad/schemas build && yarn workspace @snailycad/config build", {
-    cwd: currentDir,
-  });
-
-  // build client
-  console.log("Building client... (this may take a few minutes)");
-  execSync("yarn workspace @snailycad/client build", { cwd: currentDir });
+  // build packages
+  console.log("Building packages... (this may take a few minutes)");
+  execSync("yarn turbo run build", { cwd: currentDir });
 
   console.log(`
 

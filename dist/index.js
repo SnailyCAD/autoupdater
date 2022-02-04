@@ -33464,14 +33464,9 @@ async function main() {
     (0, node_child_process_1.execSync)("yarn", { cwd: currentDir });
     // copy .env file to client & api
     (0, node_child_process_1.execSync)("node scripts/copy-env.mjs --client --api", { cwd: currentDir });
-    // build util packages
-    console.log("Building util packages...");
-    (0, node_child_process_1.execSync)("yarn workspace @snailycad/schemas build && yarn workspace @snailycad/config build", {
-        cwd: currentDir,
-    });
-    // build client
-    console.log("Building client... (this may take a few minutes)");
-    (0, node_child_process_1.execSync)("yarn workspace @snailycad/client build", { cwd: currentDir });
+    // build packages
+    console.log("Building packages... (this may take a few minutes)");
+    (0, node_child_process_1.execSync)("yarn turbo run build", { cwd: currentDir });
     console.log(`
 
 >> SnailyCADv4 was successfully updated.
