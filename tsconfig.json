@@ -4,7 +4,7 @@
 
     "outDir": "./dist",
     "target": "ESNext",
-    "module": "CommonJS",
+    "module": "ESNext",
     "declaration": true,
 
     /* Strict Type-Checking Options */
