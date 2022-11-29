@@ -32267,8 +32267,14 @@ const gitPull_1 = __nccwpck_require__(30060);
 const inquirer_1 = __importDefault(__nccwpck_require__(90019));
 const node_path_1 = __nccwpck_require__(49411);
 exports.__IS_DEV__ = node_process_1.default.env.NODE_ENV === "development";
-// eslint-disable-next-line promise/catch-or-return
-main().then(() => node_process_1.default.exit(0));
+main()
+    .then(() => node_process_1.default.exit(0))
+    .catch((e) => {
+    const stdout = e?.stdout;
+    const message = Buffer.from(stdout).toString("utf8");
+    console.error(message || e);
+    node_process_1.default.exit(1);
+});
 async function main() {
     const cwd = node_process_1.default.cwd();
     const isCADDir = await (0, isCADDirectory_1.isCADDirectory)(cwd);
