@@ -7,8 +7,15 @@ import { resolve } from "node:path";
 
 export const __IS_DEV__ = process.env.NODE_ENV === "development";
 
-// eslint-disable-next-line promise/catch-or-return
-main().then(() => process.exit(0));
+main()
+  .then(() => process.exit(0))
+  .catch((e) => {
+    const stdout = e?.stdout;
+    const message = Buffer.from(stdout).toString("utf8");
+    console.error(message || e);
+
+    process.exit(1);
+  });
 
 async function main() {
   const cwd = process.cwd();
