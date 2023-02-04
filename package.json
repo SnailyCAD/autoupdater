@@ -4,7 +4,7 @@
   "description": "A simple script to automatically run the required steps to update SnailyCADv4.",
   "author": {
     "name": "Dev-CasperTheGhost",
-    "url": "https://snailycad.caspertheghost.me"
+    "url": "https://snailycad.org"
   },
   "license": "MIT",
   "scripts": {
