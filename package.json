@@ -19,7 +19,7 @@
   "devDependencies": {
     "@casper124578/eslint-config": "^5.0.1",
     "@types/node": "^18.11.9",
-    "@typescript-eslint/parser": "^5.45.0",
+    "@typescript-eslint/parser": "^5.54.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
