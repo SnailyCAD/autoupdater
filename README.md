@@ -7,7 +7,7 @@ A simple script to automatically run the required steps to update SnailyCADv4.
 _`curl` is supported on all operating systems._
 
 ```sh
-curl https://raw.githubusercontent.com/SnailyCAD/autoupdater/main/dist/index.js > autoupdater.js
+curl https://raw.githubusercontent.com/SnailyCAD/autoupdater/main/dist/index.js > autoupdater.mjs
 
-node autoupdater.js
+node autoupdater.mjs
 ```
