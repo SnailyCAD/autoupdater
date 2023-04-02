@@ -1,5 +1,6 @@
 {
   "name": "autoupdater",
+  "type": "module",
   "version": "1.0.0",
   "description": "A simple script to automatically run the required steps to update SnailyCADv4.",
   "author": {
@@ -10,23 +11,23 @@
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,yml,md}\"",
     "lint": "eslint . --ext .ts,.tsx",
-    "test-tsc": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "build": "ncc build ./src/script.ts -t -o dist/"
   },
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^9.1.5"
   },
   "devDependencies": {
-    "@casper124578/eslint-config": "^5.0.1",
-    "@types/node": "^18.11.9",
-    "@typescript-eslint/parser": "^5.45.0",
-    "eslint": "^8.28.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@casper124578/eslint-config": "^6.0.0",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.0",
-    "@types/inquirer": "^8.2.1",
-    "@vercel/ncc": "^0.34.0",
-    "typescript": "^4.9.3"
+    "prettier": "^2.8.7",
+    "@types/inquirer": "^9.0.3",
+    "@vercel/ncc": "^0.36.1",
+    "typescript": "^5.0.3"
   },
   "prettier": {
     "semi": true,

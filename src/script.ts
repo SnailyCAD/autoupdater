@@ -1,7 +1,7 @@
 import process from "node:process";
 import { execSync } from "node:child_process";
-import { isCADDirectory } from "./utils/isCADDirectory";
-import { gitPull } from "./utils/gitPull";
+import { isCADDirectory } from "./utils/isCADDirectory.js";
+import { gitPull } from "./utils/gitPull.js";
 import inquirer from "inquirer";
 import { resolve } from "node:path";
 

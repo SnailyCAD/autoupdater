@@ -1,6 +1,6 @@
 import process from "node:process";
 import { execSync } from "node:child_process";
-import { __IS_DEV__ } from "../script";
+import { __IS_DEV__ } from "../script.js";
 
 export async function gitPull(currentDir: string) {
   let out: string;
