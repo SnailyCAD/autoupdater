@@ -46,14 +46,14 @@ async function main() {
 
   // install dependencies
   console.log("Installing dependencies... (this may take a few minutes)");
-  execSync("yarn", { cwd: currentDir });
+  execSync("pnpm install", { cwd: currentDir });
 
   // copy .env file to client & api
   execSync("node scripts/copy-env.mjs --client --api", { cwd: currentDir });
 
   // build packages
   console.log("Building packages... (this may take a few minutes)");
-  execSync("yarn turbo run build", { cwd: currentDir });
+  execSync("pnpm run build", { cwd: currentDir });
 
   console.log(`
 
